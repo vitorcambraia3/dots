@@ -1,0 +1,537 @@
+config_version = 14
+
+[bar]
+order = [ "main", "dock", "capsula", "mini", "transparent" ]
+
+    [bar.capsula]
+    background_opacity = 0.0
+    capsule = true
+    capsule_padding = 20.0
+    capsule_radius = 6
+    capsule_thickness = 0.99999998137354851
+    color = "primary"
+    enabled = false
+    end = [ "group:g1" ]
+    font_weight = 700
+    hover_highlight = false
+    icon_color = "primary"
+    margin_edge = 10
+    margin_ends = 10
+    padding = 0
+    radius = 0
+    start = [ "group:g2", "group:g3" ]
+    thickness = 25
+
+        [[bar.capsula.capsule_group]]
+        accordion = false
+        accordion_direction = "end"
+        enabled = true
+        fill = "surface_variant"
+        id = "g1"
+        members = [ "tray", "notifications", "volume", "bar_3", "theme_mode", "status" ]
+        opacity = 1.0
+        padding = 20.0
+
+        [[bar.capsula.capsule_group]]
+        accordion = false
+        accordion_direction = "end"
+        enabled = true
+        fill = "surface_variant"
+        id = "g2"
+        members = [ "wallhaven_2", "workspaces" ]
+        opacity = 1.0
+        padding = 20.0
+
+        [[bar.capsula.capsule_group]]
+        accordion = false
+        accordion_direction = "end"
+        enabled = true
+        fill = "surface_variant"
+        id = "g3"
+        members = [ "audio_visualizer" ]
+        opacity = 1.0
+        padding = 0.0
+
+    [bar.dock]
+    auto_hide = true
+    capsule = true
+    capsule_opacity = 0.0
+    capsule_padding = 20.0
+    capsule_radius = 4
+    capsule_thickness = 0.79999998584389687
+    center = [ "settings", "media", "clock", "wallpaper", "recorder", "screenshot", "clipboard", "session" ]
+    color = "primary"
+    end = []
+    font_weight = 700
+    icon_color = "primary"
+    layer = "overlay"
+    margin_edge = 5
+    margin_ends = 640
+    padding = 0
+    position = "bottom"
+    radius = 4
+    reserve_space = false
+    scale = 1.1500000096857548
+    show_on_workspace_switch = false
+    start = []
+
+    [bar.main]
+    border = "primary"
+    color = "primary"
+    enabled = false
+    end = [ "tray", "notifications", "bluetooth", "brightness", "battery", "bar", "theme_mode" ]
+    font_weight = 700
+    icon_color = "primary"
+    margin_edge = 9
+    margin_ends = 9
+    radius = 4
+    shadow = false
+    start = [ "wallhaven", "workspaces", "audio_visualizer" ]
+    thickness = 25
+
+    [bar.mini]
+    background_opacity = 0.0
+    capsule = true
+    capsule_radius = 4
+    capsule_thickness = 0.99999998137354851
+    center = []
+    color = "primary"
+    enabled = false
+    end = [ "group:g1" ]
+    hover_highlight = false
+    icon_color = "primary"
+    margin_edge = 9
+    margin_ends = 9
+    padding = 0
+    radius = 0
+    start = []
+    thickness = 25
+    widget_spacing = 15
+
+        [[bar.mini.capsule_group]]
+        accordion = false
+        accordion_direction = "end"
+        border = ""
+        enabled = true
+        fill = "surface_variant"
+        id = "g1"
+        members = [ "clock", "volume", "wallhaven_3", "bar_2", "workspaces" ]
+        opacity = 1.0
+        padding = 20.0
+
+    [bar.transparent]
+    background_opacity = 0.0
+    enabled = false
+    end = [ "tray", "notifications", "volume", "theme_mode" ]
+    font_weight = 800
+    margin_ends = 0
+    radius = 0
+    start = [ "wallhaven_4", "workspaces", "audio_visualizer" ]
+    thickness = 25
+
+[control_center]
+hidden_tabs = [ "monitor", "power", "network", "bluetooth" ]
+show_shortcut_labels = false
+width = 860
+
+[desktop_widgets]
+schema_version = 2
+widget_order = []
+
+    [desktop_widgets.grid]
+    cell_size = 16
+    major_interval = 4
+    visible = true
+
+    [desktop_widgets.widget]
+
+[dock]
+active_monitor_only = true
+auto_hide = true
+icon_size = 16
+reserve_space = false
+
+[idle]
+behavior_order = [ "lock", "screen-off", "lock-and-suspend" ]
+
+    [idle.behavior.lock]
+    action = "lock"
+    enabled = true
+    timeout = 600.0
+
+    [idle.behavior.lock-and-suspend]
+    action = "lock_and_suspend"
+    enabled = true
+    timeout = 900.0
+
+    [idle.behavior.screen-off]
+    action = "screen_off"
+    enabled = true
+    timeout = 660.0
+
+[location]
+auto_locate = true
+
+[lockscreen]
+blurred_desktop = true
+
+[lockscreen_widgets]
+enabled = true
+schema_version = 2
+widget_order = [
+    "lockscreen-login-box@DP-1",
+    "lockscreen-login-box@HDMI-A-1",
+    "lockscreen-widget-0000000000000001",
+    "lockscreen-widget-0000000000000002",
+    "lockscreen-widget-0000000000000003",
+    "lockscreen-widget-0000000000000004",
+    "lockscreen-widget-0000000000000005",
+    "lockscreen-widget-0000000000000006",
+    "lockscreen-widget-0000000000000007",
+    "lockscreen-widget-0000000000000008",
+    "lockscreen-widget-0000000000000009",
+    "lockscreen-widget-000000000000000a",
+    "lockscreen-widget-000000000000000c"
+]
+
+    [lockscreen_widgets.grid]
+    cell_size = 8
+    major_interval = 4
+    visible = true
+
+    [lockscreen_widgets.widget."lockscreen-login-box@DP-1"]
+    box_height = 196.0
+    box_width = 810.0
+    cx = 540.0
+    cy = 1738.0
+    output = "DP-1"
+    placement_height = 1920.0
+    placement_width = 1080.0
+    rotation = 0.0
+    type = "login_box"
+
+        [lockscreen_widgets.widget."lockscreen-login-box@DP-1".settings]
+        background_color = "surface_variant"
+        background_opacity = 0.88
+        background_radius = 12.0
+        center_password_text = false
+        input_opacity = 1.0
+        input_radius = 6.0
+        layout = "regular"
+        show_caps_lock = true
+        show_keyboard_layout = true
+        show_login_button = true
+        show_media = true
+        show_session_buttons = true
+        show_unlock_hint = true
+        show_weather = true
+
+    [lockscreen_widgets.widget."lockscreen-login-box@HDMI-A-1"]
+    box_height = 70.0
+    box_width = 704.0
+    cx = 942.0
+    cy = 825.0
+    output = "HDMI-A-1"
+    placement_height = 1080.0
+    placement_width = 1920.0
+    rotation = 0.0
+    type = "login_box"
+
+        [lockscreen_widgets.widget."lockscreen-login-box@HDMI-A-1".settings]
+        background_color = "surface_variant"
+        background_opacity = 0.88
+        background_radius = 12.0
+        center_password_text = false
+        input_opacity = 1.0
+        input_radius = 6.0
+        layout = "compact"
+        show_caps_lock = true
+        show_keyboard_layout = true
+        show_login_button = true
+        show_media = true
+        show_session_buttons = true
+        show_unlock_hint = false
+        show_weather = true
+
+    [lockscreen_widgets.widget.lockscreen-widget-0000000000000001]
+    box_height = 200.0
+    box_width = 208.0
+    cx = 473.0
+    cy = 760.0
+    output = "HDMI-A-1"
+    placement_height = 1080.0
+    placement_width = 1920.0
+    rotation = 0.0
+    type = "media_player"
+
+    [lockscreen_widgets.widget.lockscreen-widget-0000000000000002]
+    box_height = 160.0
+    box_width = 208.0
+    cx = 473.0
+    cy = 564.0
+    output = "HDMI-A-1"
+    placement_height = 1080.0
+    placement_width = 1920.0
+    rotation = 0.0
+    type = "label"
+
+        [lockscreen_widgets.widget.lockscreen-widget-0000000000000002.settings]
+        title = ""
+
+    [lockscreen_widgets.widget.lockscreen-widget-0000000000000003]
+    box_height = 176.0
+    box_width = 208.0
+    cx = 473.0
+    cy = 380.0
+    output = "HDMI-A-1"
+    placement_height = 1080.0
+    placement_width = 1920.0
+    rotation = 0.0
+    type = "weather"
+
+    [lockscreen_widgets.widget.lockscreen-widget-0000000000000004]
+    box_height = 224.0
+    box_width = 704.0
+    cx = 942.0
+    cy = 660.0
+    output = "HDMI-A-1"
+    placement_height = 1080.0
+    placement_width = 1920.0
+    rotation = 0.0
+    type = "sticker"
+
+        [lockscreen_widgets.widget.lockscreen-widget-0000000000000004.settings]
+        image_path = "/home/vitor/Imagens/Eikichi_Onizuka2.webp"
+        opacity = 1.0
+
+    [lockscreen_widgets.widget.lockscreen-widget-0000000000000005]
+    box_height = 240.0
+    box_width = 696.0
+    cx = 942.0
+    cy = 412.0
+    output = "HDMI-A-1"
+    placement_height = 1080.0
+    placement_width = 1920.0
+    rotation = 0.0
+    type = "clock"
+
+        [lockscreen_widgets.widget.lockscreen-widget-0000000000000005.settings]
+        font_family = "Unifont"
+
+    [lockscreen_widgets.widget.lockscreen-widget-0000000000000006]
+    box_height = 120.0
+    box_width = 128.0
+    cx = 1508.0
+    cy = 484.0
+    output = "HDMI-A-1"
+    placement_height = 1080.0
+    placement_width = 1920.0
+    rotation = 0.0
+    type = "sysmon"
+
+        [lockscreen_widgets.widget.lockscreen-widget-0000000000000006.settings]
+        display = "gauge"
+        show_label = false
+        stat = "swap_pct"
+        stat2 = "cpu_temp"
+
+    [lockscreen_widgets.widget.lockscreen-widget-0000000000000007]
+    box_height = 120.0
+    box_width = 128.0
+    cx = 1508.0
+    cy = 352.0
+    output = "HDMI-A-1"
+    placement_height = 1080.0
+    placement_width = 1920.0
+    rotation = 0.0
+    type = "sysmon"
+
+        [lockscreen_widgets.widget.lockscreen-widget-0000000000000007.settings]
+        display = "gauge"
+        show_label = false
+        stat = "gpu_temp"
+        stat2 = "cpu_temp"
+
+    [lockscreen_widgets.widget.lockscreen-widget-0000000000000008]
+    box_height = 120.0
+    box_width = 128.0
+    cx = 1369.0
+    cy = 484.0
+    output = "HDMI-A-1"
+    placement_height = 1080.0
+    placement_width = 1920.0
+    rotation = 0.0
+    type = "sysmon"
+
+        [lockscreen_widgets.widget.lockscreen-widget-0000000000000008.settings]
+        display = "gauge"
+        show_label = false
+        stat = "ram_pct"
+        stat2 = "cpu_temp"
+
+    [lockscreen_widgets.widget.lockscreen-widget-0000000000000009]
+    box_height = 120.0
+    box_width = 128.0
+    cx = 1369.0
+    cy = 352.0
+    output = "HDMI-A-1"
+    placement_height = 1080.0
+    placement_width = 1920.0
+    rotation = 0.0
+    type = "sysmon"
+
+        [lockscreen_widgets.widget.lockscreen-widget-0000000000000009.settings]
+        display = "gauge"
+        show_label = false
+        stat = "cpu_usage"
+        stat2 = "cpu_temp"
+
+    [lockscreen_widgets.widget.lockscreen-widget-000000000000000a]
+    box_height = 304.0
+    box_width = 264.0
+    cx = 1437.0
+    cy = 708.0
+    output = "HDMI-A-1"
+    placement_height = 1080.0
+    placement_width = 1920.0
+    rotation = 0.0
+    type = "audio_visualizer"
+
+        [lockscreen_widgets.widget.lockscreen-widget-000000000000000a.settings]
+        bands = 32
+        centered = false
+        mirrored = false
+        show_when_idle = true
+
+    [lockscreen_widgets.widget.lockscreen-widget-000000000000000c]
+    box_height = 80.0
+    box_width = 1200.0
+    cx = 969.0
+    cy = 236.0
+    output = "HDMI-A-1"
+    placement_height = 1080.0
+    placement_width = 1920.0
+    rotation = 0.0
+    type = "label"
+
+        [lockscreen_widgets.widget.lockscreen-widget-000000000000000c.settings]
+        background = true
+        background_color = "surface"
+        background_opacity = 0.80000000000000004
+        background_padding = 10
+        background_radius = 12
+        color = "on_surface"
+        description = ""
+        font_family = ""
+        opacity = 1.0
+        shadow = true
+        title = ""
+
+[plugin_settings."icefish/phone-connect"]
+details_placement = "floating"
+
+[plugin_settings."icefish/phone-operate"]
+main_placement = "floating"
+
+[plugin_settings."noctalia/wallhaven"]
+api_key = "Y27ziR3W5XGjokNxPm2jn2mFBenO74Wf"
+browser_placement = "floating"
+
+[plugins]
+enabled = [ "icefish/phone-connect", "noctalia/screen_recorder", "noctalia/mpvpaper", "noctalia/wallhaven" ]
+
+[shell]
+avatar_path = "/home/vitor/Imagens/Eikichi_Onizuka2.webp"
+button_borders = false
+card_borders = false
+corner_radius_scale = 0.80000001192092896
+font_family = "JetBrainsMono NF"
+niri_overview_type_to_launch_enabled = true
+polkit_agent = true
+
+    [shell.launcher.providers.session]
+    global = false
+
+    [shell.panel]
+    control_center_placement = "floating"
+    open_near_click_control_center = true
+    session_placement = "floating"
+    wallpaper_placement = "floating"
+
+[theme]
+builtin = "Ayu"
+community_palette = "Kanagawa Paper"
+custom_palette = "28-1-ts"
+mode = "light"
+source = "wallpaper"
+wallpaper_scheme = "m3-content"
+
+    [theme.templates]
+    builtin_ids = [ "alacritty", "btop", "cava", "gtk3", "gtk4", "kcolorscheme", "kitty", "niri", "qt" ]
+    community_ids = [
+        "opencode",
+        "spicetify",
+        "pywalfox",
+        "discord",
+        "telegram",
+        "neovim",
+        "obsidian",
+        "zed",
+        "steam",
+        "fastfetch",
+        "yazi"
+    ]
+
+[wallpaper]
+directory = "/home/vitor/Imagens/wallpapers"
+
+    [wallpaper.default]
+    path = "/home/vitor/Imagens/wallpapers/F7pASYTWkAABBsC.jpg"
+
+    [wallpaper.last]
+    path = "/home/vitor/Imagens/wallpapers/F7pASYTWkAABBsC.jpg"
+
+    [wallpaper.monitors.DP-1]
+    path = "/home/vitor/Imagens/wallpapers/F7pASYTWkAABBsC.jpg"
+
+    [wallpaper.monitors.HDMI-A-1]
+    path = "/home/vitor/Imagens/wallpapers/F7pASYTWkAABBsC.jpg"
+
+[widget.audio_visualizer]
+show_when_idle = true
+width = 150
+
+[widget.bar]
+type = "icefish/phone-connect:bar"
+
+[widget.bar_2]
+type = "icefish/phone-connect:bar"
+
+[widget.bar_3]
+type = "icefish/phone-connect:bar"
+
+[widget.media]
+album_art_only = true
+art_size = 20
+hide_artist = true
+max_length = 40
+min_length = 0
+
+[widget.recorder]
+type = "noctalia/screen_recorder:recorder"
+
+[widget.settings]
+custom_image = "/usr/share/icons/cachyos.svg"
+custom_image_colorize = true
+
+[widget.wallhaven]
+type = "noctalia/wallhaven:wallhaven"
+
+[widget.wallhaven_2]
+type = "noctalia/wallhaven:wallhaven"
+
+[widget.wallhaven_3]
+type = "noctalia/wallhaven:wallhaven"
+
+[widget.wallhaven_4]
+type = "noctalia/wallhaven:wallhaven"

@@ -262,6 +262,19 @@ follows_mouse = true
 "Mod+WheelUp" = "window-focus-left"
 "Mod+WheelDown" = "window-focus-right"
 "Mod+O" = { action = "overview-toggle", repeat = false }
+"Mod+Minus" = "window-modify-height-down -0.10"
+"Mod+Equal" = "window-modify-height-down 0.10"
+# Vim
+"Ctrl+Mod+H" = "window-move-by -50 0"
+"Ctrl+Mod+L" = "window-move-by 50 0"
+"Ctrl+Mod+J" = "window-move-by 0 50"
+"Ctrl+Mod+K" = "window-move-by 0 -50"
+
+# Setas direcionais
+"Ctrl+Mod+Left" = "window-move-by -50 0"
+"Ctrl+Mod+Right" = "window-move-by 50 0"
+"Ctrl+Mod+Down" = "window-move-by 0 50"
+"Ctrl+Mod+Up" = "window-move-by 0 -50"
 
 # Workspaces
 # Move the whole workspace, retaining its name, layout, and windows.
